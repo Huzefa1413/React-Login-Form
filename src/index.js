@@ -1,17 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
+import "./index.css";
+import background from './images/bg-01.jpg';
+import facebookicon from './images/facebook.png';
+import twittericon from './images/twitter.png';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function Hi() {
+  return (
+    <div className="maindiv">
+      <div className="picdiv"><img src={background} alt="this is background" /></div>
+      <div className="formdiv">
+        <div className="heading">
+          Login to continue
+        </div>
+        <form>
+          <input className="email" type="email" placeholder="Email" />
+          <input className="password" type="password" placeholder="Password" />
+          <div className="checkBoxAndForgetPass">
+            <div className="checkbox">
+              <input type="checkbox" /><span>Remember Me</span>
+            </div>
+            <div className="forgotpass">Forgot Password?</div>
+          </div>
+          <div className="button">LOGIN</div>
+          <div className="signup">
+            or sign up using
+          </div>
+          <div className="icon">
+            <img src={facebookicon} alt="" />
+            <img src={twittericon} alt="" />
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDom.render(<Hi />, document.querySelector("#root"));

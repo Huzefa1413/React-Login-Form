@@ -1,13 +1,114 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  margin: 0%;
+  padding: 0%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.maindiv {
+  display: flex;
+}
+.picdiv{
+  width: 58.5%;
+}
+.picdiv img{
+  width: 100%;
+}
+.formdiv {
+  width: 31.5%;
+  min-height: 100vh;
+  display: block;
+  background-color: #f7f7f7;
+  padding: 173px 5% 55px;
+}
+
+.heading {
+  width: 100%;
+  font-size: 30px;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+  font-family: sans-serif;
+  width: 100%;
+  padding: 0px 0px 43px 0px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+.email,
+.password {
+  height: 80px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.2;
+  background-color: #f7f7f7;
+  padding: 0 26px;
+}
+.checkBoxAndForgetPass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0px 32px;
+}
+.checkbox,
+.forgotpass {
+  font-family: sans-serif;
+  font-size: 13px;
+  color: #999;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkbox input {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  height: 50px;
+  border-radius: 10px;
+  background: #6675df;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.signup{
+  padding: 46px 0px 20px;
+  font-size: 13px;
+  color: #999;
+  text-align: center;
+  line-height: 1.4;
+  font-family: sans-serif;
+  letter-spacing: 0.5px;
+}
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon img{
+  width: 36px;
+  height: 36px;
+  margin-right: 5px;
+}
+@media screen and (max-width: 750px)
+{
+  .picdiv{
+    display: none;
+  }
+  .formdiv{
+    width: 100%;
+  }
 }
